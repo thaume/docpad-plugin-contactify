@@ -1,40 +1,41 @@
 {
-	"name": "docpad-plugin-contactify",
-	"version": "2.0.0",
-	"description": "DocPad plugin to create, send and customize a contact form.",
-	"homepage": "https://github.com/thaume/docpad-plugin-contactify",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"form",
-		"mail"
-	],
-	"author": "Tom Coquereau <tom@thau.me> (http://thau.me)",
-	"maintainers": [
-		"Tom Coquereau <tom@thau.me> (http://thau.me)"
-	],
-	"contributors": [
-		"Tom Coquereau <tom@thau.me> (http://thau.me)"
-	],
-	"bugs": {
-		"url": "https://github.com/thaume/docpad-plugin-contactify/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "https://github.com/thaume/docpad-plugin-contactify.git"
-	},
-	"engines" : {
-		"node": ">=0.8",
-		"docpad": ">=6"
-	},
-	"dependencies": {
-        "nodemailer": ">=0.4.4"
-    },
-	"devDependencies": {
-		"coffee-script": "~1.6.2"
-	},
-	"main": "./out/contactify.plugin.js",
-	"scripts": {
-		"test": "node ./out/contactify.test.js"
-	}
+  "name": "docpad-plugin-contactify",
+  "version": "2.0.0",
+  "description": "DocPad plugin to create, send and customize a contact form.",
+  "homepage": "https://github.com/thaume/docpad-plugin-contactify",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "form",
+    "mail"
+  ],
+  "author": "Tom Coquereau <tom@thau.me> (http://thau.me)",
+  "maintainers": [
+    "Tom Coquereau <tom@thau.me> (http://thau.me)"
+  ],
+  "contributors": [
+    "Tom Coquereau <tom@thau.me> (http://thau.me)"
+  ],
+  "bugs": {
+    "url": "https://github.com/thaume/docpad-plugin-contactify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thaume/docpad-plugin-contactify.git"
+  },
+  "engines": {
+    "node": ">=0.8",
+    "docpad": ">=6"
+  },
+  "dependencies": {
+    "nodemailer": ">=0.4.4"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2"
+  },
+  "main": "./out/contactify.plugin.js",
+  "scripts": {
+    "install": "cake compile",
+    "test": "node ./out/contactify.test.js"
+  }
 }
