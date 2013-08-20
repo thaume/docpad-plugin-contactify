@@ -36,7 +36,7 @@ configuration file:
 
 API:
 - path: should match the POST action on your site's form.
-- transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/)
+- transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/) (any email account should do, it is where the mail is sent from)
 - redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
 - to: may be a list of destination email addresses for sending form submissions
 
