@@ -26,7 +26,7 @@ configuration file:
 			transport: {
 				service: 'Gmail',
 				auth: {
-					user: 'hello@myamazingstartup.com',
+					user: 'contact@me.com',
 					pass: 'password'
 				}
 			}
@@ -34,10 +34,33 @@ configuration file:
 			to: 'me@site.name'
 ```
 
-path: should match the POST action on your site's form.
-transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/)
-redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
-to: may be a list of destination email addresses for sending form submissions
+```HTML
+<form action="/contact-form" method="POST">
+	<fieldset>
+		<legend>Contact form</legend>
+		<p>
+			<label for="name">Name/company</label>
+			<input type="text" id="name" name="name" placeholder="Name/company" />
+		</p>
+		<p>
+			<label for="email">Your email adress</label>
+			<input type="email" id="email" name="email" placeholder="contact@me.com" />
+		</p>
+		<p>
+			<label for="message">My message</label>
+			<textarea id="message" name="message" cols="10" rows="10" placeholder="Your message..."></textarea>
+		</p>
+		<p>
+			<button type="submit" value="Send" name="contact-send" id="contact-send">Send</button>
+		</p>
+	</fieldset>
+</form>
+```
+
+- path: should match the POST action on your site's form.
+- transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/)
+- redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
+- to: may be a list of destination email addresses for sending form submissions
 
 
 ## License
