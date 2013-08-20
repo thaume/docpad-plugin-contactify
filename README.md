@@ -16,8 +16,7 @@ Or add it to your package.json file
 
 ### Setup
 
-Configure the path to be intercepted on your server and the email details for sending out form data in the DocPad
-configuration file:
+Configure the path to be intercepted on your server and the email details for sending out form data in the DocPad configuration file (aka docpad.coffee):
 
 ```coffeescript
 	plugins:
@@ -40,12 +39,13 @@ API:
 - redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
 - to: may be a list of destination email addresses for sending form submissions
 
-Then create your contact form
+Then create your contact form:
 
 ```HTML
 <form action="/contact-form" method="POST">
 	<fieldset>
 		<legend>Contact form</legend>
+		<input type="hidden" name="redirect" value="<%- @document.url %>?formSent=1">
 		<p>
 			<label for="name">Name/company</label>
 			<input type="text" id="name" name="name" placeholder="Name/company" />
@@ -64,6 +64,8 @@ Then create your contact form
 	</fieldset>
 </form>
 ```
+
+Note that here the hidden input 'redirect' will redirect to the page where the form was sent from, you hard-code any other url you want in there
 
 ## License
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
