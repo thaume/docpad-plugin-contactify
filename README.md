@@ -34,6 +34,14 @@ configuration file:
 			to: 'me@site.name'
 ```
 
+API:
+- path: should match the POST action on your site's form.
+- transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/)
+- redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
+- to: may be a list of destination email addresses for sending form submissions
+
+Then create your contact form
+
 ```HTML
 <form action="/contact-form" method="POST">
 	<fieldset>
@@ -56,12 +64,6 @@ configuration file:
 	</fieldset>
 </form>
 ```
-
-- path: should match the POST action on your site's form.
-- transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/)
-- redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
-- to: may be a list of destination email addresses for sending form submissions
-
 
 ## License
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
