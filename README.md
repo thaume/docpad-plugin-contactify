@@ -65,7 +65,7 @@ Then create your contact form:
 </form>
 ```
 
-Note that here the hidden input 'redirect' will redirect to the page where the form was sent from, you hard-code any other url you want in there
+Note that here the hidden input 'redirect' will redirect to the page where the form was sent from, you can hard-code any other url you want in there
 
 ## License
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
