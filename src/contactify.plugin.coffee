@@ -12,9 +12,10 @@ module.exports = (BasePlugin) ->
 			{server} = opts
 
 			server.post config.path, (req, res) ->
+				receivers = []
 				enquiry = req.body
 
-				receivers = [].push(enquiry.email, config.to)
+				receivers.push(enquiry.email, config.to)
 
 				mailOptions = {
 					to: receivers.join(","),
