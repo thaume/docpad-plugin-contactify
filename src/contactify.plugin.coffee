@@ -17,7 +17,7 @@ module.exports = (BasePlugin) ->
 				receivers = [].push(enquiry.email, config.to)
 
 				mailOptions = {
-					to: receivers,
+					to: receivers.join(","),
 					subject: 'Enquiry from ' + enquiry.name + ' <' + enquiry.email + '>',
 					text: enquiry.message,
 					html: '<p>' + enquiry.message + '</p>'
