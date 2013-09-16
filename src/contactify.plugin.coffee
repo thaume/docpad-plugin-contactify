@@ -30,6 +30,6 @@ module.exports = (BasePlugin) ->
 					else
 						console.log("Message sent: " + resp.message);
 
-				res.redirect enquiry.redirect or '/'
+				res.redirect enquiry.redirect or config.redirect
 
 			@
