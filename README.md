@@ -29,14 +29,20 @@ Configure the path to be intercepted on your server and the email details for se
 					pass: 'password'
 				}
 			}
+			from: me@site.name,
 			redirect: '/'
 			to: 'me@site.name'
 ```
 
 API:
 - path: should match the POST action on your site's form.
+
 - transport: configures an SMTP transport instance using [nodemailer](http://www.nodemailer.com/) (any email account should do, it is where the mail is sent from)
+
+- from: you can here force a value to put in the 'from' field in the sent email. By default the from value is the email of the person who send the contact form.
+
 - redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
+
 - to: list of destination email addresses for sending form submissions (comma separated)
 
 Then create your contact form:
