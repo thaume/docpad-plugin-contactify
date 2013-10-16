@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-contactify",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "DocPad plugin to create, send and customize a contact form.",
   "homepage": "https://github.com/thaume/docpad-plugin-contactify",
   "keywords": [
