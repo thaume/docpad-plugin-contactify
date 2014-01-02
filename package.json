@@ -14,7 +14,8 @@
     "Tom Coquereau <tom@thau.me> (http://thau.me)"
   ],
   "contributors": [
-    "Tom Coquereau <tom@thau.me> (http://thau.me)"
+    "Tom Coquereau <tom@thau.me> (http://thau.me)",
+    "Marcus Stong <stongo@gmail.com> (http://github.com/stongo)"
   ],
   "bugs": {
     "url": "https://github.com/thaume/docpad-plugin-contactify/issues"
