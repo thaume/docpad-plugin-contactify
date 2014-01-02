@@ -14,7 +14,7 @@ Or add it to your package.json file
 
 ## Usage (more coming soon)
 
-### Setup
+### Setup for single contact form
 
 Configure the path to be intercepted on your server and the email details for sending out form data in the DocPad configuration file (aka docpad.coffee):
 
@@ -34,6 +34,38 @@ Configure the path to be intercepted on your server and the email details for se
 			to: 'me@site.name'
 ```
 
+### Setup for multiple contact forms
+
+Configure the path to be intercepted on your server and the email details for sending out form data in the DocPad configuration file (aka docpad.coffee):
+
+```coffeescript
+	plugins:
+		contactify:
+			contact:
+				path: '/contact-form'
+				from: me@site.name,
+				redirect: '/'
+				to: 'me@site.name'
+				subject: 'Inquiry' # OPTIONAL
+				honeypot: 'honey' # OPTIONAL: honeypot input field name
+				fields: ['message', 'phone-number', 'address']
+			subscribe:
+				path: '/subscribe-form'
+				from: you@site.name,
+				redirect: '/'
+				to: 'you@site.name'
+				subject: 'Subscribe to newsletter'
+				honeypot: 'honey'
+				fields: ['message', 'list']
+			transport: {
+				service: 'Gmail',
+				auth: {
+					user: 'contact@me.com',
+					pass: 'password'
+				}
+			}
+```
+
 API:
 - path: should match the POST action on your site's form.
 
@@ -44,6 +76,13 @@ API:
 - redirect: options that will be overwritten by the hidden input called redirect in your form (if it exists)
 
 - to: list of destination email addresses for sending form submissions (comma separated)
+
+- subject: OPTIONAL subject line of email
+
+- honeypot:  OPTIONAL: honeypot input field name for spam prevention. If this field is filled out mail will not send
+
+- fields: OPTIONAL: a list of input field names to include in email message. DEFAULT: ['message']
+
 
 Then create your contact form:
 
